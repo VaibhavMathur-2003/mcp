@@ -1,8 +1,23 @@
 {
-    "mcpServers": {
-      "puppeteer": {
-        "command": "npx",
-        "args": ["-y", "@modelcontextprotocol/server-puppeteer"]
-      }
-    }
+  "mcpServers": {
+    "weather": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--with",
+        "mcp[cli]",
+        "mcp",
+        "run",
+        "C:\\modelcontext\\server\\server.py"
+      ]
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "C:/"]
+    },
+  "git": {
+    "command": "uvx",
+    "args": ["mcp-server-git", "--repository", "C:/modelcontext"]
   }
+  }
+}
